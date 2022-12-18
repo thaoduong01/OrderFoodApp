@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground"
+        android:foreground="@drawable/bg2"
+        />
+
+    <TextView
+        android:id="@+id/txtwelcome"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/lobster"
+        android:gravity="center"
+        android:text="My Food Order App"
+        android:textColor="@color/white"
+        android:textSize="33sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="27dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/txtw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/txtwelcome"
+        android:layout_marginTop="404dp"
+        android:text="Chào mừng bạn đến với My Food"
+        android:textColor="#FBFBFB"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"/>
+
+
+    <Button
+        android:onClick="loginActivity"
+        android:id="@+id/btnDangNhap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:layout_below="@+id/txtw"
+        android:text="Đăng Nhập"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:background="@drawable/btn_bg_design"/>
+
+    <TextView
+        android:onClick="registerActivity"
+        android:id="@+id/txtDangKy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnDangNhap"
+        android:text="Đăng Ký"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>

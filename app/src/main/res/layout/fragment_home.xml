@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mediumGray"
+    tools:context=".ui.home.HomeFragment">
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+
+       <EditText
+           android:id="@+id/edtSearch"
+           android:layout_width="300dp"
+           android:layout_height="wrap_content"
+           android:layout_margin="6dp"
+           android:background="@drawable/search"
+           android:drawableRight="@drawable/ic_search"
+           android:drawablePadding="9dp"
+           android:fontFamily="@font/amita"
+           android:hint="Tìm Kiếm Món"
+           android:padding="10dp"
+           android:textColor="@color/white"
+           android:textColorHint="@color/white"
+           android:textSize="13sp"
+           app:layout_constraintTop_toTopOf="parent"
+           tools:ignore="MissingConstraints" />
+
+       <ImageView
+           android:layout_width="40dp"
+           android:layout_height="40dp"
+           android:layout_marginBottom="520dp"
+           android:layout_marginTop="10dp"
+           android:background="@drawable/search"
+           android:padding="10dp"
+           android:src="@drawable/ic_person"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toEndOf="@+id/edtSearch" />
+
+       <TextView
+           android:id="@+id/txtHello"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_margin="6dp"
+           android:fontFamily="@font/amarante"
+           android:text="Hello User"
+           android:textColor="@color/white"
+           android:textSize="35sp"
+           tools:layout_editor_absoluteX="0dp"
+           tools:layout_editor_absoluteY="27dp"
+           app:layout_constraintTop_toBottomOf="@+id/edtSearch"
+           tools:ignore="MissingConstraints" />
+
+       <TextView
+           android:id="@+id/txt1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="6dp"
+           android:fontFamily="@font/amarante"
+           android:text="Bạn muốn tìm gì?"
+           android:textColor="@color/white"
+           android:textSize="15sp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/txtHello"/>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/home_hor_rec"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:layout_margin="6dp"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/txt1"/>
+
+       <androidx.recyclerview.widget.RecyclerView
+           android:id="@+id/home_ver_rec"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="6dp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/home_hor_rec" />
+
+
+       <com.google.android.material.floatingactionbutton.FloatingActionButton
+           android:id="@+id/floatingAddFood"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:clickable="true"
+           android:src="@android:drawable/ic_input_add"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintHorizontal_bias="0.554"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toBottomOf="@+id/home_ver_rec"
+           app:layout_constraintVertical_bias="1.0"
+           tools:ignore="SpeakableTextPresentCheck" />
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
